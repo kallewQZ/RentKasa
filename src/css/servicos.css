@@ -1,0 +1,555 @@
+/* ==================== RESET E BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    position: fixed;
+    /* fixo no topo */
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: rgb(255, 225, 0);
+}
+
+.logo small {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav span {
+    color: rgb(255, 225, 0);
+}
+
+.nav a:hover {
+    transform: scale(1.15);
+}
+
+/* ==================== HOME SECTION ==================== */
+.home-section {
+    margin-top: 100px;
+    /* compensando header fixo */
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #000;
+}
+
+.home-header {
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* para responsividade */
+}
+
+.home-title h1 {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.home-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #000;
+}
+
+.home-header img,
+.home-header-image {
+    border-radius: 25px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Conteúdo principal */
+.home-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.home-intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.home-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.home-highlight {
+    background-color: #ffffff;
+    color: #000;
+    padding: 30px;
+    border-left: 5px solid #b9752d;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.home-cta {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background-color: #b9752d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #b8860b;
+}
+
+.home-footer {
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    margin-top: 40px;
+}
+
+/* ==================== REAL ESTATE CONSULTING ==================== */
+.real-estate-consulting {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.real-estate-consulting .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.real-estate-consulting .section-header img.section-image {
+    margin-top: -80px;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+
+}
+
+.real-estate-consulting .section-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.real-estate-consulting .section-header p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.real-estate-consulting .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.real-estate-consulting .feature {
+    background-color: #b9752d;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    flex: 1 1 250px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.real-estate-consulting .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.real-estate-consulting .feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.real-estate-consulting .feature p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* ==================== RESPONSIVO ==================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        /* toggle via JS */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .home-title h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .home-intro {
+        font-size: 16px;
+    }
+
+    .real-estate-consulting .features {
+        justify-content: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .home-title h1 {
+        font-size: 24px;
+    }
+
+    .home-content h2 {
+        font-size: 22px;
+    }
+
+    .home-services {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-highlight {
+        padding: 20px;
+        border-left-width: 4px;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .real-estate-consulting .feature {
+        flex: 1 1 100%;
+    }
+}
+
+/* ====== SECÇÃO SERVIÇOS ====== */
+
+.services-section {
+    padding: 60px 10%;
+    background-color: white;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards clicáveis */
+.service-card {
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin: 20px 15px 10px;
+}
+
+.service-card p {
+    margin: 0 15px;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== FOOTER ABOUT ====== */
+
+.about-footer {
+    max-width: 900px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.about-footer p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-size: 16px;
+}
+
+.about-footer strong {
+    display: block;
+    font-size: 18px;
+    color: #c8a24a;
+}
+
+.site-footer {
+    background-color: #fff;
+    color: #1f1f1f;
+    padding: 60px 10% 20px;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.site-footer h3,
+.site-footer h4 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-link {
+    color: #b9752d;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #000000;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+
+.footer-socials a {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+/* Formulário (caso ainda não tenha estilo) */
+.footer-contact input,
+.footer-contact textarea {
+    background-color: #f3f2f2b9;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.footer-contact button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer-contact button:hover {
+    opacity: 0.9;
+}
+
+/* BOTÃO MENU MOBILE */
+/* BOTÃO MENU MOBILE – FIXO NO CANTO SUPERIOR DIREITO */
+.menu-mobile {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    user-select: none;
+}
+
+/* MENU MOBILE BASE */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 30px;
+    gap: 25px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+/* MENU ABERTO */
+.mobile-nav.active {
+    right: 0;
+}
+
+/* ===== 900px até 500px ===== */
+@media (max-width: 900px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .real-estate-consulting .section-header img.section-image {
+        display: flex;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .service-card {
+        width: 100%;
+        height: 320px;
+    }
+}
+
+/* ===== abaixo de 500px ===== */
+@media (max-width: 500px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .mobile-nav {
+        width: 100%;
+        padding: 140px 40px;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        font-size: 18px;
+    }
+}

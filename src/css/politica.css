@@ -1,0 +1,396 @@
+/* ==================== RESET E BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: rgb(255, 225, 0);
+}
+
+.logo small {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav span {
+    color: rgb(255, 225, 0);
+}
+
+.nav a:hover {
+    transform: scale(1.15);
+}
+
+/* ==================== PRIVACY POLICY ==================== */
+.privacy-policy {
+    margin-top: 120px;
+    /* compensando header fixo */
+    background-color: #fff;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.privacy-policy .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.policy-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.policy-header img.policy-image {
+    width: 600px;
+    height: 300px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.policy-header img.policy-image:hover {
+    transform: scale(1.05);
+}
+
+.policy-header h2 {
+    color: #000;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.policy-header p {
+    font-size: 16px;
+    color: #000;
+}
+
+/* SEÇÕES DE POLÍTICA */
+.policy-section {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* efeito zoom */
+}
+
+.policy-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.policy-section h3 {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.policy-section h3 .icon {
+    font-size: 24px;
+}
+
+.policy-section p,
+.policy-section ul {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.policy-section ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.policy-section a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        /* toggle via JS */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .policy-header h2 {
+        font-size: 28px;
+    }
+
+    .policy-header img.policy-image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .policy-section {
+        padding: 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .privacy-policy {
+        padding: 40px 15px;
+        margin-top: 100px;
+    }
+
+    .policy-header h2 {
+        font-size: 24px;
+    }
+
+    .policy-header img.policy-image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .policy-section {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    .policy-section h3 {
+        font-size: 20px;
+    }
+}
+
+.site-footer {
+    background-color: #fff;
+    color: #1f1f1f;
+    padding: 60px 10% 20px;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.site-footer h3,
+.site-footer h4 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-link {
+    color: #b9752d;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #000000;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+
+.footer-socials a {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Formulário (caso ainda não tenha estilo) */
+.footer-contact input,
+.footer-contact textarea {
+    background-color: #f3f2f2b9;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.footer-contact button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer-contact button:hover {
+    opacity: 0.9;
+}
+
+/* BOTÃO MENU MOBILE */
+/* BOTÃO MENU MOBILE – FIXO NO CANTO SUPERIOR DIREITO */
+.menu-mobile {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    user-select: none;
+}
+
+/* MENU MOBILE BASE */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 30px;
+    gap: 25px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+/* MENU ABERTO */
+.mobile-nav.active {
+    right: 0;
+}
+
+/* ===== 900px até 500px ===== */
+@media (max-width: 900px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .privacy-policy {
+        margin-top: 35px;
+    }
+
+    .policy-header img.policy-image {
+        max-width: 100%;
+    }
+}
+
+/* ===== abaixo de 500px ===== */
+@media (max-width: 500px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .mobile-nav {
+        width: 100%;
+        padding: 140px 40px;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        font-size: 18px;
+    }
+}

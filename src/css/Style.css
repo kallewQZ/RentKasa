@@ -1,0 +1,806 @@
+/* =========================
+   RESET E BASE
+   Remove margens e paddings padrão, define box-sizing e fonte global
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Facilita cálculo de largura e altura */
+    font-family: 'Montserrat', sans-serif;
+    /* Fonte principal */
+}
+
+body {
+    background-color: #ffffff;
+    /* Fundo branco padrão */
+    color: #000000;
+    /* Cor do texto padrão */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+}
+
+/* =========================
+   HEADER / MENU
+========================= */
+/* =========================
+   HEADER FIXO
+   Menu e logo visíveis sempre no topo da página
+========================= */
+.header {
+    position: fixed;
+    /* Mantém o header visível ao rolar a página */
+    top: 0;
+    width: 100%;
+    /* Ocupa toda a largura da tela */
+    padding: 20px 40px;
+    /* Espaçamento interno confortável */
+    display: flex;
+    justify-content: space-between;
+    /* Distribui logo e menu nas extremidades */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
+    z-index: 100;
+    /* Mantém acima de outros elementos */
+    background-color: #fff;
+    /* Fundo branco semi-transparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra sutil para destaque */
+}
+
+/* =========================
+   LOGO
+   Título principal e variações
+========================= */
+.logo {
+    font-size: 25px;
+    /* Tamanho chamativo */
+    font-weight: 600;
+    /* Negrito médio para destaque */
+}
+
+.logo span {
+    color: rgb(255, 225, 0);
+    /* Destaque em amarelo para parte da logo */
+}
+
+.logo small {
+    display: block;
+    /* Cada small em linha própria */
+    font-size: 12px;
+    /* Tamanho menor para subtítulo */
+    font-weight: 100;
+    /* Leve para contraste com logo principal */
+}
+
+/* =========================
+   MENU DESKTOP
+   Links de navegação horizontais
+========================= */
+.nav a {
+    margin-left: 30px;
+    /* Espaçamento entre links */
+    text-decoration: none;
+    /* Remove sublinhado padrão */
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    /* Espaço entre letras para estilo moderno */
+    opacity: 0.85;
+    display: inline-block;
+    /* Permite efeitos de transform no hover */
+    transition: transform 0.3s ease;
+    /* Animação suave de zoom */
+}
+
+.nav span {
+    color: rgb(255, 225, 0);
+    /* Destaque de cores em letras específicas */
+}
+
+.nav a:hover {
+    transform: scale(1.15);
+    /* Aumenta levemente o link ao passar o mouse */
+}
+
+/* =========================
+   HERO SECTION
+   Primeira seção grande com imagem de destaque
+========================= */
+.hero {
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    background-image: url(../img/remodelacao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Imagem centralizada e dimensionada */
+    position: relative;
+    /* Necessário para posicionamento absoluto do conteúdo */
+}
+
+/* =========================
+   HERO CONTENT
+   Conteúdo centralizado sobre a imagem
+========================= */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centraliza vertical e horizontalmente */
+    text-align: center;
+    padding: 0 20px;
+    /* Padding lateral para melhorar visualização em telas pequenas */
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 6px;
+    display: block;
+    /* Força quebra de linha para subtítulo */
+    margin-bottom: 15px;
+    /* Espaço abaixo do subtítulo */
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    letter-spacing: 10px;
+    font-weight: 600;
+    /* Título principal chamativo */
+}
+
+.hero-content img {
+    width: 100%;
+    /* Limita tamanho máximo da imagem */
+    height: 600px;
+    background-color: #ffffffb9;
+    /* Fundo semi-transparente para contraste sobre imagem */
+    border-radius: 50px;
+    /* Bordas arredondadas para efeito visual moderno */
+}
+
+
+/* =========================
+   SEÇÃO ABOUT
+   Estiliza a seção principal "Sobre" do site
+========================= */
+
+/* ====== SECÇÃO ABOUT ====== */
+
+.about-section {
+    padding: 60px 10%;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-text ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #c8a24a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #a88432;
+}
+
+/* Imagem à direita */
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ====== SECÇÃO SERVIÇOS ====== */
+
+.services-section {
+    padding: 60px 10%;
+    background-color: white;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards clicáveis */
+.service-card {
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin: 20px 15px 10px;
+}
+
+.service-card p {
+    margin: 0 15px;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== FOOTER ABOUT ====== */
+
+.about-footer {
+    max-width: 900px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.about-footer p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-size: 16px;
+}
+
+.about-footer strong {
+    display: block;
+    font-size: 18px;
+    color: #c8a24a;
+}
+
+/* =========================
+   HOME SECTION
+   Seção inicial da página, com títulos, destaque e serviços
+========================= */
+.home-section {
+    margin-top: -80px;
+    /* Espaço superior para compensar header fixo */
+    padding: 80px 10%;
+    /* Espaçamento interno horizontal responsivo */
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    /* Fundo branco (gradient simples) */
+    color: #000;
+    /* Texto escuro */
+}
+
+/* =========================
+   HEADER DA HOME
+   Título, subtítulo e imagem principal
+========================= */
+.home-header {
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* Quebra automática para telas menores */
+}
+
+.home-title h1 {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.home-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Imagem da home */
+.home-header img,
+.home-header-image {
+    border-radius: 25px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL DA HOME
+========================= */
+.home-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.home-intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Serviços em grid */
+.home-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Destaque de informações */
+.home-highlight {
+    background-color: #ffffff;
+    color: #000;
+    padding: 30px;
+    border-left: 5px solid #b9752d;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Call to action */
+.home-cta {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background-color: #b9752d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #b8860b;
+}
+
+/* Footer interno da home */
+.home-footer {
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    margin-top: 40px;
+}
+
+/* =========================
+   REAL ESTATE CONSULTING
+   Seção de consultoria imobiliária com features
+========================= */
+.real-estate-consulting {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.real-estate-consulting .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header da seção */
+.real-estate-consulting .section-header img.section-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.real-estate-consulting .section-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.real-estate-consulting .section-header p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* Features em flexbox */
+.real-estate-consulting .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cards de feature */
+.real-estate-consulting .feature {
+    background-color: #b9752d;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    flex: 1 1 250px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.real-estate-consulting .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.real-estate-consulting .feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.real-estate-consulting .feature p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* =========================
+   RESPONSIVIDADE HOME
+========================= */
+
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .home-title h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .home-intro {
+        font-size: 16px;
+    }
+
+    .real-estate-consulting .features {
+        justify-content: center;
+    }
+
+    .about-container {
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Celulares (≤ 600px) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .home-title h1 {
+        font-size: 24px;
+    }
+
+    .home-content h2 {
+        font-size: 22px;
+    }
+
+    .home-services {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-highlight {
+        padding: 20px;
+        border-left-width: 4px;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .real-estate-consulting .feature {
+        flex: 1 1 100%;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* =========================
+   FOOTER
+   Rodapé do site com links, contato e redes sociais
+========================= */
+.site-footer {
+    margin-top: -100px;
+    background-color: #fff;
+    /* Fundo branco */
+    color: #1f1f1f;
+    /* Texto escuro */
+    padding: 60px 10% 20px;
+    /* Espaçamento: topo grande, laterais 10%, base menor */
+    font-size: 15px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Colunas flexíveis adaptáveis ao tamanho da tela */
+    gap: 40px;
+    /* Espaço entre colunas */
+}
+
+.site-footer h3,
+.site-footer h4 {
+    color: #000;
+    /* Títulos mais escuros para destaque */
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+    /* Melhor leitura em parágrafos */
+}
+
+/* =========================
+   LINKS DO FOOTER
+========================= */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-link {
+    color: #b9752d;
+    /* Cor dourada para links */
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-link:hover {
+    text-decoration: underline;
+    /* Indicação visual de hover */
+}
+
+/* =========================
+   REDES SOCIAIS
+========================= */
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    /* Espaçamento entre ícones */
+}
+
+/* =========================
+   RODAPÉ INFERIOR
+========================= */
+.footer-bottom {
+    border-top: 1px solid #000;
+    /* Linha divisória */
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+
+/* =========================
+   FORMULÁRIO NO FOOTER
+========================= */
+.footer-contact input,
+.footer-contact textarea {
+    background-color: #f3f2f2b9;
+    /* Fundo levemente transparente */
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+    /* Estilo clean para inputs */
+}
+
+.footer-contact button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Botão clicável e destacado */
+}
+
+.footer-contact button:hover {
+    opacity: 0.9;
+    /* Feedback visual ao passar o mouse */
+}
+
+/* =========================
+   MENU MOBILE
+   Botão de menu e navegação lateral
+========================= */
+.menu-mobile {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    /* Apenas aparece em telas pequenas */
+    user-select: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Inicialmente escondido fora da tela */
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 30px;
+    gap: 25px;
+    transition: right 0.4s ease;
+    /* Animação de abertura suave */
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.mobile-nav.active {
+    right: 0;
+    /* Menu visível quando ativo */
+}
+
+/* =========================
+   RESPONSIVIDADE MOBILE
+========================= */
+
+/* Tablets e pequenas telas */
+@media (max-width: 900px) {
+
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .hero {
+        display: flex;
+        max-height: 500px;
+    }
+
+    .hero-content img {
+        display: flex;
+        width: 280px;
+        height: auto;
+    }
+
+    /*    .about-section {
+        display: flex;
+        margin-top: -200px;
+    }
+
+    .about-image img {
+        display: flex;
+        width: 100%;
+        position: relative;
+        z-index: 50;
+    } */
+
+    .service-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-card p {
+        margin-bottom: 12px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 500px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .mobile-nav {
+        width: 100%;
+        padding: 140px 40px;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        font-size: 18px;
+    }
+}

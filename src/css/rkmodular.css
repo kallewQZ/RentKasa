@@ -1,0 +1,774 @@
+/* =========================
+   RESET E BASE
+   Remove margens e paddings padrão, define box-sizing e fonte global
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Facilita cálculo de largura e altura */
+    font-family: 'Montserrat', sans-serif;
+    /* Fonte principal */
+}
+
+body {
+    background-color: #ffffff;
+    /* Fundo branco padrão */
+    color: #000000;
+    /* Cor do texto padrão */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+}
+
+/* =========================
+   HEADER / MENU
+========================= */
+.header {
+    position: fixed;
+    /* Fica fixo no topo ao rolar a página */
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* Fica acima de outros elementos */
+    background-color: #fff;
+    /* Fundo semi-transparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: rgb(255, 225, 0);
+    /* Destaque de cores na logo */
+}
+
+.logo small {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/* Menu desktop */
+.nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    /* efeito hover */
+}
+
+.nav span {
+    color: rgb(255, 225, 0);
+    /* Destaque de letras específicas */
+}
+
+.nav a:hover {
+    transform: scale(1.15);
+    /* Zoom ao passar o mouse */
+}
+
+/* =========================
+   RK MODULAR (SEÇÃO PRINCIPAL)
+========================= */
+/* =========================
+   RK MODULAR (SEÇÃO PRINCIPAL)
+   Seção principal com grid e fundo escuro
+========================= */
+.rk-modular {
+    background-color: #000;
+    /* Fundo preto para contraste com elementos */
+    margin-top: 100px;
+    /* Espaço superior para compensar header fixo */
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    /* Grid com 2 colunas, proporção maior para conteúdo */
+    gap: 60px;
+    /* Espaço entre colunas */
+    padding: 120px 80px;
+    /* Espaçamento interno generoso */
+    color: #fff;
+    /* Cor do texto branco para contraste */
+}
+
+.rk-content h2 {
+    font-size: 34px;
+    letter-spacing: 6px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.rk-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 420px;
+    /* Limita largura do texto para melhor leitura */
+    opacity: 0.85;
+}
+
+/* =========================
+   CARROSSEL
+   Linha horizontal de cards com navegação
+========================= */
+.rk-carousel {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    /* Esconde conteúdo que excede área visível */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    /* Espaço entre cards */
+    transition: transform 0.5s ease-in-out;
+    /* Movimentação suave do carrossel */
+}
+
+.carousel-card {
+    flex: 0 0 260px;
+    /* Largura fixa para cada card */
+    height: 170px;
+    overflow: hidden;
+    /* Evita que imagens vazem do card */
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Preenche card mantendo proporção */
+    transition: transform 0.6s ease;
+}
+
+.carousel-card:hover img {
+    transform: scale(1.1);
+    /* Zoom ao passar o mouse */
+}
+
+/* =========================
+   DOTS DO CARROSSEL
+   Indicadores de posição
+========================= */
+.carousel-dots {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.4);
+    /* Destaque do dot ativo */
+}
+
+.dot:hover {
+    background: #fff;
+}
+
+/* =========================
+   SETAS DO CARROSSEL
+   Navegação manual
+========================= */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 26px;
+    padding: 10px 14px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-arrow.prev {
+    left: 10px;
+}
+
+.carousel-arrow.next {
+    right: 10px;
+}
+
+/* =========================
+   SEÇÃO RK MODULAR (OVERLAY)
+   Fundo com imagem e overlay escuro
+========================= */
+.rk-modular-section {
+    background-image: url("rk-modular-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.rk-overlay {
+    background-color: #000;
+    max-width: 100%;
+    /* Caixa escura sobre a imagem */
+    padding: 40px;
+}
+
+/* Headers internos */
+.rk-header h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.rk-header h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Cards e seções */
+.rk-partnership {
+    margin: 40px 0;
+}
+
+.rk-why h3 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.rk-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* =========================
+   RK CARD ZOOM
+   Cards individuais com efeito hover
+========================= */
+.rk-card {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rk-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   OFERTAS E CALL TO ACTION
+========================= */
+.rk-offer {
+    margin: 50px 0;
+}
+
+.rk-offer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rk-offer li {
+    margin-bottom: 10px;
+}
+
+.rk-cta {
+    text-align: center;
+}
+
+.rk-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 34px;
+    background-color: #b9752d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.rk-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #b8860b;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   Ajustes para tablets e celulares
+========================= */
+
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .rk-modular {
+        grid-template-columns: 1fr;
+        padding: 80px 40px;
+        gap: 40px;
+    }
+
+    .rk-content h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .rk-content p {
+        max-width: 100%;
+    }
+
+    .rk-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Celulares (≤ 600px) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .rk-modular {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .rk-content h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .rk-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rk-overlay {
+        padding: 20px;
+    }
+
+    .rk-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================
+   RK REFORMA (CONSTRUÇÕES E CARDS)
+========================= */
+.rk-reforma .rk-construcoes {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #000000;
+    padding: 50px;
+    font-size: 18px;
+}
+
+.rk-reforma {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container dos cards */
+.rk-reforma .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de cada card */
+.rk-reforma .card {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* melhorias */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Zoom leve no hover */
+.rk-reforma .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Alternância entre texto e imagem */
+.rk-reforma .cards-construcao,
+.rk-reforma .cards-reparacao {
+    flex-direction: row;
+}
+
+.rk-reforma .cards-restauracao {
+    flex-direction: row-reverse;
+}
+
+/* Texto do card */
+.rk-reforma .card-text {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+/* Imagem do card */
+.rk-reforma .card-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.rk-reforma .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botão dentro do card */
+.rk-reforma .card-text .botao-card {
+    display: inline-block;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #b9752d;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.rk-reforma .card-text .botao-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #b8860b;
+}
+
+/* Descrição geral */
+.rk-reforma .descricao {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+/* Botão dentro da descrição */
+.rk-reforma .descricao .botao-descricao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #b9752d;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.rk-reforma .descricao .botao-descricao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #b8860b;
+}
+
+/* =========================
+   RESPONSIVIDADE MOBILE RK REFORMA
+========================= */
+@media (max-width: 768px) {
+
+    .rk-reforma .card,
+    .rk-reforma .cards-construcao,
+    .rk-reforma .cards-restauracao,
+    .rk-reforma .cards-reparacao {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .rk-reforma .card-text {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .rk-reforma .card-img {
+        height: 250px;
+    }
+
+    .rk-reforma .card-img img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .rk-reforma .rk-construcoes {
+        padding: 40px 15px;
+    }
+
+    .rk-reforma .rk-construcoes h1 {
+        font-size: 36px;
+    }
+
+    .rk-reforma .descricao {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .rk-reforma .descricao .botao-descricao {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* =========================
+   FOOTER
+   Rodapé do site com links, contato e redes sociais
+========================= */
+.site-footer {
+    background-color: #fff;
+    /* Fundo branco */
+    color: #1f1f1f;
+    /* Texto escuro */
+    padding: 60px 10% 20px;
+    /* Espaçamento: topo grande, laterais 10%, base menor */
+    font-size: 15px;
+}
+
+.footer-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Colunas flexíveis adaptáveis ao tamanho da tela */
+    gap: 40px;
+    /* Espaço entre colunas */
+}
+
+.site-footer h3,
+.site-footer h4 {
+    color: #000;
+    /* Títulos mais escuros para destaque */
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+    /* Melhor leitura em parágrafos */
+}
+
+/* =========================
+   LINKS DO FOOTER
+========================= */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-link {
+    color: #b9752d;
+    /* Cor dourada para links */
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-link:hover {
+    text-decoration: underline;
+    /* Indicação visual de hover */
+}
+
+/* =========================
+   REDES SOCIAIS
+========================= */
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    /* Espaçamento entre ícones */
+}
+
+/* =========================
+   RODAPÉ INFERIOR
+========================= */
+.footer-bottom {
+    border-top: 1px solid #000;
+    /* Linha divisória */
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+
+/* =========================
+   FORMULÁRIO NO FOOTER
+========================= */
+.footer-contact input,
+.footer-contact textarea {
+    background-color: #f3f2f2b9;
+    /* Fundo levemente transparente */
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+    /* Estilo clean para inputs */
+}
+
+.footer-contact button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Botão clicável e destacado */
+}
+
+.footer-contact button:hover {
+    opacity: 0.9;
+    /* Feedback visual ao passar o mouse */
+}
+
+/* =========================
+   MENU MOBILE
+   Botão de menu e navegação lateral
+========================= */
+.menu-mobile {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    /* Apenas aparece em telas pequenas */
+    user-select: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Inicialmente escondido fora da tela */
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 30px;
+    gap: 25px;
+    transition: right 0.4s ease;
+    /* Animação de abertura suave */
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.mobile-nav.active {
+    right: 0;
+    /* Menu visível quando ativo */
+}
+
+/* =========================
+   RESPONSIVIDADE MOBILE
+========================= */
+
+/* Tablets e pequenas telas */
+@media (max-width: 900px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+}
+
+/* Celulares pequenos */
+@media (max-width: 500px) {
+    .mobile-nav span {
+        color: rgb(255, 225, 0);
+        /* Destaque em amarelo para parte da logo */
+    }
+
+    .mobile-nav {
+        width: 100%;
+        padding: 140px 40px;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        font-size: 18px;
+    }
+}

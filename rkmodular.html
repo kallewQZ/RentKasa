@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define a língua da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivo para mobile -->
+    <title>RK Modular - Imobiliária RK</title> <!-- Título da página -->
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="./src/css/rkmodular.css">
+
+    <!-- Fonts do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--    HEADER / MENU PRINCIPAL -->
+    <header class="header">
+        <!-- Logo da empresa -->
+        <div class="logo">
+            <span>R</span>ENT<span>K</span>ASA
+            <small>Investimentos Imobiliários</small>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="nav">
+            <a href="index.html"><span>I</span>nício</a>
+            <a href="sobre.html"><span>S</span>obre</a>
+            <a href="servicos.html"><span>S</span>erviços</a>
+            <a href="https://www.imovirtual.com/pt/empresas/agencias-imobiliarias/rentkasa-investimentos-imobiliarios-ID48869?lang=&estate=FLAT&transaction=SELL&market=ALL"
+                target="_blank" rel="noopener noreferrer">
+                <span>P</span>esquisa de Imóveis
+            </a>
+            <a href="politica.html"><span>P</span>olítica de Privacidade</a>
+            <a href="contato.html"><span>C</span>ontacto</a>
+        </nav>
+
+        <!-- Botão Mobile -->
+        <div class="menu-mobile" id="menuToggle">☰</div>
+    </header>
+
+    <!-- MENU MOBILE - Aparece quando o botão mobile é clicado -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html"><span>I</span>nício</a>
+        <a href="sobre.html"><span>S</span>obre</a>
+        <a href="servicos.html"><span>S</span>erviços</a>
+        <a href="https://www.imovirtual.com/pt/empresas/agencias-imobiliarias/rentkasa-investimentos-imobiliarios-ID48869?lang=&estate=FLAT&transaction=SELL&market=ALL"
+            target="_blank" rel="noopener noreferrer">
+            <span>P</span>esquisa de Imóveis
+        </a>
+        <a href="politica.html"><span>P</span>olítica de Privacidade</a>
+        <a href="contato.html"><span>C</span>ontacto</a>
+    </nav>
+
+    <!-- SEÇÃO RK MODULAR (CARROSSEL) -->
+    <section class="rk-modular">
+        <div class="rk-content">
+            <h2>RK MODULAR</h2>
+            <p>
+                A RK Modular desenvolve soluções construtivas inovadoras,
+                unindo tecnologia, sustentabilidade e eficiência.
+                Projetos inteligentes, modulares e pensados para o futuro da habitação.
+            </p>
+
+            <!-- Video conceitual comentado -->
+            <!--
+            <a href="https://www.youtube.com/watch?v=cTjlNuEWzvE" target="_blank" class="video-panel">
+                <div class="play">▶</div>
+                <span>Assista ao conceito RK Modular</span>
+            </a>
+            -->
+        </div>
+        <!-- Carrossel de imagens -->
+        <div class="rk-carousel">
+            <!-- Setas de navegação -->
+            <button class="carousel-arrow prev">&#10094;</button>
+            <button class="carousel-arrow next">&#10095;</button>
+            <!-- Track que contém todas as imagens -->
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-card"><img src="./src/img/20.jpg" alt="Imagem 1"></div>
+                <div class="carousel-card"><img src="./src/img/21.jpg" alt="Imagem 2"></div>
+                <div class="carousel-card"><img src="./src/img/22.jpg" alt="Imagem 3"></div>
+                <div class="carousel-card"><img src="./src/img/23.jpg" alt="Imagem 4"></div>
+                <div class="carousel-card"><img src="./src/img/24.jpg" alt="Imagem 5"></div>
+                <div class="carousel-card"><img src="./src/img/25.jpg" alt="Imagem 6"></div>
+                <div class="carousel-card"><img src="./src/img/23.jpg" alt="Imagem 4"></div>
+                <div class="carousel-card"><img src="./src/img/24.jpg" alt="Imagem 5"></div>
+                <div class="carousel-card"><img src="./src/img/25.jpg" alt="Imagem 6"></div>
+            </div>
+            <!-- Dots indicadores do carrossel -->
+            <div class="carousel-dots" id="carouselDots">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO RK MODULAR - Explicações sobre vantagens, parceria e oferta -->
+    <section class="rk-modular-section">
+        <!-- Overlay de conteúdo -->
+        <div class="rk-overlay">
+            <!-- Cabeçalho da seção -->
+            <div class="rk-header">
+                <h3>Construção inteligente e sustentável, pensada para si.</h3>
+
+                <p>
+                    Na <strong>RK MODULAR</strong>, somos especialistas na construção de casas modulares
+                    que combinam design moderno, funcionalidade e elevada durabilidade.
+                    Trabalhamos com materiais de excelência, como aço tubular, aço quinado
+                    e estruturas de contentores, garantindo projectos robustos, confortáveis e eficientes.
+                </p>
+            </div>
+            <!-- Parceria -->
+            <div class="rk-partnership">
+                <h4>Parceria de excelência</h4>
+                <p>
+                    Uma referência no sector da construção modular. Esta parceria permite-nos
+                    oferecer soluções completas e inovadoras para rentabilizar o seu terreno,
+                    disponibilizando módulos T1 a T4, com áreas entre 20m² e 150m².
+                </p>
+                <p>
+                    Com esta aliança, garantimos qualidade, inovação e flexibilidade em cada projecto,
+                    assegurando que cada casa modular responde perfeitamente às expectativas
+                    e necessidades dos nossos clientes.
+                </p>
+            </div>
+            <!-- Porque escolher RK -->
+            <div class="rk-why">
+                <h3>PORQUÊ ESCOLHER A RK MODULAR?</h3>
+                <!-- Cards com vantagens -->
+                <div class="rk-cards">
+                    <div class="rk-card">
+                        <h4>Design moderno e funcional</h4>
+                        <p>Casas que aliam estética e praticidade, para um estilo de vida contemporâneo.</p>
+                    </div>
+                    <div class="rk-card">
+                        <h4>Execução rápida e eficiente</h4>
+                        <p>Reduza prazos sem comprometer a qualidade da construção.</p>
+                    </div>
+                    <div class="rk-card">
+                        <h4>Materiais resistentes e duradouros</h4>
+                        <p>Garantimos segurança e longevidade em cada projecto.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- O que oferecemos -->
+            <div class="rk-offer">
+                <h3>O que oferecemos</h3>
+                <ul>
+                    <li><strong>Projectos totalmente personalizáveis:</strong> Adaptados às suas necessidades e ao
+                        espaço disponível.</li>
+                    <li><strong>Sustentabilidade:</strong> Privilegiamos práticas que respeitam o ambiente em todos os
+                        detalhes.</li>
+                </ul>
+            </div>
+            <!-- CTA final -->
+            <div class="rk-cta">
+                <h3>Transforme o seu sonho em realidade com a inovação da habitação modular.</h3>
+                <p>Descubra uma nova forma de construir — rápida, económica e amiga do ambiente.</p>
+
+                <h4>Expanda as suas oportunidades imobiliárias connosco</h4>
+                <p>Entre em contacto e saiba como os nossos clientes alcançaram resultados notáveis
+                    e estão satisfeitos com os nossos serviços personalizados.</p>
+                <a href="https://wa.me/351925411355?text=Quero%20alugar%20a%20casa%202" class="rk-button"
+                    target="_blank">Entre em Contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="rk-reforma">
+        <!-- Cards -->
+        <div class="cards-container" id="remodelacao">
+            <!-- Foco Construções -->
+            <div class="rk-construcoes">
+                <h1>RK Remodelação</h1>
+            </div>
+            <!-- Card 1: Construção -->
+            <!--     <div class="card cards-construcao">
+                <div class="card-text">
+                    <h2>Construção</h2>
+                    <p>Serviços completos de construção para sua casa, desde fundações até acabamentos.
+                        “Transforme sua casa desde o alicerce até os acabamentos. Oferecemos projetos completos de
+                        construção, garantindo qualidade, segurança e eficiência em cada etapa.”
+                    </p>
+                </div>
+                <div class="card-img">
+                    <img src="./src/img/contrucao.png" alt="Construção">
+                </div>
+            </div> -->
+            <!-- Card 2: Restauração -->
+            <div class="card cards-restauracao">
+                <div class="card-text">
+                    <h2>Remodelação</h2>
+                    <p>Transformamos ambientes antigos, restaurando beleza e funcionalidade.
+                        “Renove seus ambientes e dê vida nova ao seu lar. Nossas remodelações combinam design moderno e
+                        funcionalidade, transformando qualquer espaço em algo incrível.”
+                    </p>
+                    <a href="https://wa.me/351925411355?text=Quero%20alugar%20a%20casa%202" class="botao-card"
+                        target="_blank">Solicite um orçamento</a>
+                </div>
+                <div class="card-img">
+                    <img src="./src/img/remodelacao.1.png" alt="Restauração">
+                </div>
+            </div>
+            <!-- Card 3: Reparações -->
+            <div class="card cards-reparacao" id="assintencia">
+                <div class="card-text">
+                    <h2>Assitência técnica ao lar</h2>
+                    <p>Reparos elétricos, canalização e pintura para manter sua casa perfeita.
+                        “Mantenha sua casa sempre perfeita. Fazemos reparos elétricos, hidráulicos, pintura e pequenos
+                        consertos, cuidando de todos os detalhes para seu conforto e segurança.”
+                    </p>
+                    <a href="https://wa.me/351925411355?text=Quero%20alugar%20a%20casa%202" class="botao-card"
+                        target="_blank">Contactar
+                        já</a>
+                </div>
+                <div class="card-img">
+                    <img src="./src/img/reparaco ao lar.1.png" alt="Reparações no lar">
+                </div>
+            </div>
+        </div>
+        <!-- Descrição abaixo dos cards -->
+        <div class="descricao">
+            <p>Oferecemos serviços completos de construção, restauração e reparação para sua casa, desde remodelações e
+                reconstrução até reparações elétricas, canalização e pintura. Cuidamos de todos os detalhes para
+                transformar a sua casa no lar dos seus sonhos.</p>
+            <a href="https://wa.me/351925411355?text=Quero%20alugar%20a%20casa%202" class="botao-descricao"
+                target="_blank">Solicite um
+                orçamento</a>
+        </div>
+    </div>
+
+    <!--   FOOTER / RODAPÉ -Contatos, sobre a empresa, links rápidos e redes sociais -->
+    <footer class="site-footer">
+        <!-- Espaço inferior vazio -->
+        <div class="footer-bottom">
+            <p></p>
+        </div>
+        <!-- Formulário de contato -->
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" placeholder="Sua mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <!-- Informações adicionais e sobre a empresa -->
+        <div class="footer-container">
+            <!-- SOBRE RK MODULAR -->
+            <div class="footer-about">
+                <h3>RK Modular</h3>
+                <p>Desenvolvendo soluções construtivas inovadoras, sustentáveis e inteligentes.
+                    Projetos modulares pensados para o futuro da habitação.</p>
+            </div>
+            <!-- SOBRE RENTKASA -->
+            <div class="footer-about">
+                <h3>Sobre a Rentkasa</h3>
+                <p>Rentkasa Investimentos Imobiliários é uma empresa dedicada à mediação e promoção
+                    imobiliária, actuando no mercado da compra, venda e restauro de imóveis.
+                    Opera na Póvoa de Varzim desde 2011, com foco em gestão de activos imobiliários
+                    e investimentos.</p>
+                <p><strong>AMI:</strong> 12731</p>
+                <p>
+                    <a href="https://www.livroreclamacoes.pt" target="_blank" class="footer-link">📕 Livro de
+                        Reclamações</a>
+                </p>
+            </div>
+            <!-- LINKS RÁPIDOS -->
+            <div class="footer-links">
+                <h3>Acesso Rápido</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <!-- CONTATOS -->
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>
+                    📧 <a href="mailto:imobiliaria@rentkasa.pt">imobiliaria@rentkasa.pt</a>
+                </p>
+                <p>
+                    📞 <a href="tel:+351925411355">+351 925 411 355</a>
+                </p>
+                <p>
+                    📍 Póvoa de Varzim, Portugal
+                </p>
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <a href="https://www.facebook.com/rentkasa" target="_blank">
+                        <img src="https://img.icons8.com/bubbles/100/facebook-new.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/rentkasa/" target="_blank">
+                        <img src="https://img.icons8.com/bubbles/100/instagram-new--v2.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Direitos autorais -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rentkasa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
