@@ -408,7 +408,16 @@ body {
     .about-image img {
         display: none;
     }
+    .about-image img {
+        display: none;
+    }
+
+    .feedback-section {
+        display: flex;
+        margin-top: -35%;
+    }
 
 }
+
 
 
