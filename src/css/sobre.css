@@ -370,9 +370,6 @@ body {
     .nav {
         display: none;
     }
-    .about-image img {
-        display: none;
-    }
 
     .menu-mobile {
         display: block;
@@ -381,6 +378,14 @@ body {
     .about-container {
         display: flex;
         flex-direction: column;
+    }
+    .about-image img {
+        display: none;
+    }
+
+    .feedback-section {
+        display: flex;
+        margin-top: -20%;
     }
 }
 
@@ -405,4 +410,5 @@ body {
     }
 
 }
+
 
