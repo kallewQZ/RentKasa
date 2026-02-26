@@ -180,3 +180,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const accepted = localStorage.getItem("cookieConsent");
+    const rejectedSession = sessionStorage.getItem("cookieRejected");
+
+    // Mostrar modal SOMENTE se:
+    // - não aceitou permanentemente
+    // - não rejeitou nesta sessão
+    if (accepted !== "accepted" && !rejectedSession) {
+        document.getElementById("cookieOverlay").style.display = "flex";
+    }
+});
+
+// ACEITAR COOKIES (persistente)
+document.getElementById("acceptCookies").addEventListener("click", function () {
+
+    localStorage.setItem("cookieConsent", "accepted");
+
+    const userData = {
+        firstVisit: new Date().toISOString(),
+        fastLoad: true
+    };
+
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    document.getElementById("cookieOverlay").style.display = "none";
+});
+
+// REJEITAR COOKIES (somente nesta sessão)
+document.getElementById("rejectCookies").addEventListener("click", function () {
+
+    // Marca rejeição apenas enquanto o navegador estiver aberto
+    sessionStorage.setItem("cookieRejected", "true");
+
+    // Garante que nada persistente fique salvo
+    localStorage.removeItem("userData");
+
+    document.getElementById("cookieOverlay").style.display = "none";
+});
+
