@@ -1,36 +1,38 @@
-/* ==================== RESET E BASE ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #000000;
 }
 
-/* ==================== HEADER ==================== */
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    padding: 20px 40px;
+    padding: 25px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 10;
 }
 
 .logo {
     font-size: 25px;
     font-weight: 600;
+    line-height: 1.2;
 }
 
 .logo span {
+    color: rgb(255, 225, 0);
+}
+
+span {
     color: rgb(255, 225, 0);
 }
 
@@ -44,7 +46,7 @@ body {
     margin-left: 30px;
     text-decoration: none;
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
     opacity: 0.85;
@@ -60,161 +62,138 @@ body {
     transform: scale(1.15);
 }
 
-/* ==================== PRIVACY POLICY ==================== */
-.privacy-policy {
-    margin-top: 120px;
-    /* compensando header fixo */
-    background-color: #fff;
-    padding: 60px 20px;
-    color: #333;
+
+/* BOTÃO MENU MOBILE */
+.menu-mobile {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-.privacy-policy .container {
-    max-width: 900px;
-    margin: 0 auto;
+/* MENU MOBILE BASE */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 30px;
+    gap: 25px;
+    transition: right 0.4s ease;
+    z-index: 1000;
 }
 
-/* HEADER */
-.policy-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.policy-header img.policy-image {
-    width: 600px;
-    height: 300px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.policy-header img.policy-image:hover {
-    transform: scale(1.05);
-}
-
-.policy-header h2 {
-    color: #000;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.policy-header p {
-    font-size: 16px;
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
     color: #000;
 }
 
-/* SEÇÕES DE POLÍTICA */
-.policy-section {
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* efeito zoom */
+/* MENU ABERTO */
+.mobile-nav.active {
+    right: 0;
 }
 
-.policy-section:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+.pesquisa-imoveis {
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.policy-section h3 {
-    font-size: 22px;
+/* remover estilo padrão do link */
+.pesquisa-imoveis a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CARD PRINCIPAL PESQUISAR */
+.pesquisar {
+    display: flex;
+    justify-content: center;
+}
+
+.pesquisar .card {
+    width: 525px;
+    height: 90px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    justify-content: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: aparecer 0.8s ease;
 }
 
-.policy-section h3 .icon {
-    font-size: 24px;
+/* CONTAINER DOS CARDS */
+.container-cards {
+    display: flex;
+    justify-content: center;
 }
 
-.policy-section p,
-.policy-section ul {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #555;
+/* CARDS DE OPÇÕES */
+.cards-opcoes {
+    display: flex;
+    gap: 30px;
 }
 
-.policy-section ul {
-    margin-left: 20px;
-    list-style-type: disc;
+/* CARD PADRÃO */
+.card {
+    width: 250px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.35s ease;
+    animation: subir 0.8s ease;
 }
 
-.policy-section a {
-    color: #0077cc;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* HOVER */
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-.policy-section a:hover {
-    text-decoration: underline;
-}
-
-/* ==================== RESPONSIVO ==================== */
-@media (max-width: 900px) {
-    .header {
-        padding: 20px 30px;
+/* ANIMAÇÕES */
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
 
-    .menu-mobile {
-        display: block;
-    }
-
-    .nav {
-        display: none;
-        /* toggle via JS */
-        flex-direction: column;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .policy-header h2 {
-        font-size: 28px;
-    }
-
-    .policy-header img.policy-image {
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .policy-section {
-        padding: 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Celulares */
-@media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
     }
 
-    .privacy-policy {
-        padding: 40px 15px;
-        margin-top: 100px;
-    }
-
-    .policy-header h2 {
-        font-size: 24px;
-    }
-
-    .policy-header img.policy-image {
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .policy-section {
-        padding: 18px;
-        font-size: 14px;
-    }
-
-    .policy-section h3 {
-        font-size: 20px;
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -310,49 +289,6 @@ body {
     opacity: 0.9;
 }
 
-/* BOTÃO MENU MOBILE */
-/* BOTÃO MENU MOBILE – FIXO NO CANTO SUPERIOR DIREITO */
-.menu-mobile {
-    position: fixed;
-    top: 25px;
-    right: 30px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1100;
-    display: none;
-    user-select: none;
-}
-
-/* MENU MOBILE BASE */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 320px;
-    height: 100vh;
-    background: #ffffff;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    padding: 120px 30px;
-    gap: 25px;
-    transition: right 0.4s ease;
-    z-index: 1000;
-}
-
-.mobile-nav a {
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #000;
-}
-
-/* MENU ABERTO */
-.mobile-nav.active {
-    right: 0;
-}
-
 /* ===== 900px até 500px ===== */
 @media (max-width: 900px) {
     .mobile-nav span {
@@ -368,21 +304,10 @@ body {
         display: block;
     }
 
-    .privacy-policy {
-        margin-top: 35px;
-    }
-
-    .policy-header img.policy-image {
-        max-width: 100%;
-    }
 }
 
 /* ===== abaixo de 500px ===== */
 @media (max-width: 500px) {
-    .mobile-nav span {
-        color: rgb(255, 225, 0);
-        /* Destaque em amarelo para parte da logo */
-    }
 
     .mobile-nav {
         width: 100%;
@@ -393,4 +318,62 @@ body {
     .mobile-nav a {
         font-size: 18px;
     }
+}
+
+/* RESPONSIVIDADE TABLET */
+@media (max-width: 900px) {
+    .pesquisa-imoveis {
+        display: flex;
+        margin-top: 20%;
+    }
+
+    .pesquisar .card {
+
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .cards-opcoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 250px;
+        height: 90px;
+        font-size: 17px;
+    }
+
+}
+
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 600px) {
+
+    .pesquisa-imoveis {
+        margin-top: 30%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .pesquisar .card {
+        width: 300px;
+        height: 70px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .cards-opcoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 140px;
+        height: 70px;
+        font-size: 15px;
+    }
+
 }
